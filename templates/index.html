@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Top Streamed Artists App{% endblock %}
+
+{% block content %}
+    <h1>Spotify Data analysis App</h1>
+    <form action="/result" method="post">
+        <label for="year">Enter Choice:</label>
+        <input type="text" id="choice" name="choice" class="border" required>
+        <label for="year">Enter YEar:</label>
+        <input type="text" id="year" name="year" class="border" required>
+        <button class="bg-indigo-500 p-2 rounded-xl text-white" type="submit">Submit</button>
+    </form>
+{% endblock %}
