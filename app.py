@@ -74,6 +74,7 @@ def overall_top_songs(df):
     df: DataFrame
     """
     top_songs = df[['track_name', 'streams']].sort_values('streams', ascending=False).head()
+    top_songs['streams'] = pd.to_numeric(top_songs['streams'], errors='coerce')
 
     plt.figure(figsize=(15, 8))
     sns.set(style='whitegrid')
@@ -96,7 +97,10 @@ def overalll_top_artist(df):
     df : Dataframe
     """
     top_artists = df.groupby('artist(s)_name').agg({'streams':'sum'}).reset_index().sort_values('streams', ascending=False).head()
-
+    
+    df['streams'] = pd.to_numeric(df['streams'], errors='coerce')
+    df = df.dropna(subset=['streams'])
+    
     plt.figure(figsize=(15, 8))
     sns.set(style='whitegrid')
 

@@ -3,12 +3,25 @@
 {% block title %}Top Streamed Artists App{% endblock %}
 
 {% block content %}
-    <h1>Spotify Data analysis App</h1>
-    <form action="/result" method="post">
-        <label for="year">Enter Choice:</label>
-        <input type="text" id="choice" name="choice" class="border" required>
-        <label for="year">Enter YEar:</label>
-        <input type="text" id="year" name="year" class="border" required>
-        <button class="bg-indigo-500 p-2 rounded-xl text-white" type="submit">Submit</button>
+    <h1 class="text-3xl font-bold mb-4 text-center">Spotify Data Analysis App</h1>
+    <form action="/result" method="post" class="max-w-md mx-auto bg-white p-6 border border-blue-500 rounded-md shadow-md">
+
+        <div class="mb-4">
+            <h3 class="text-xl font-bold">Choices:</h3>
+            <ol class="list-decimal list-inside">
+                <li class="mb-1">Top Artists by Year</li>
+                <li class="mb-1">Top Songs by Year</li>
+                <li class="mb-1">Overall Top Songs</li>
+                <li class="mb-1">Overall Top Artists</li>
+            </ol>
+        </div>
+
+        <label for="choice" class="block text-sm font-medium text-gray-600">Enter Choice:</label>
+        <input type="text" id="choice" name="choice" class="mt-1 p-2 border border-blue-500 rounded-md w-full" placeholder="Ex. 2" required>
+
+        <label for="year" class="block mt-4 text-sm font-medium text-gray-600">Enter Year:</label>
+        <input type="text" id="year" name="year" class="mt-1 p-2 border border-blue-500 rounded-md w-full" placeholder="Ex. 2023 (For choice of 'By Year')">
+
+        <button class="mt-4 bg-indigo-500 p-2 rounded-xl text-white hover:bg-indigo-700 w-full" type="submit">Submit</button>
     </form>
 {% endblock %}

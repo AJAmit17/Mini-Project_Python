@@ -3,7 +3,7 @@
 {% block title %}Result{% endblock %}
 
 {% block content %}
-    <h1>Result</h1>
-    <img src="{{ plot_filename }}" alt="Result image">
-    <p><a class="text-blue" href="/">Go back to home</a></p>
+<h1 class="text-3xl font-bold mb-4">Result</h1>
+<img src="{{ plot_filename }}" alt="Result image" class="max-w-full mb-4 rounded-md shadow-md">
+<p><a href="/" class="text-blue-500 hover:underline">Go back to home</a></p>
 {% endblock %}
