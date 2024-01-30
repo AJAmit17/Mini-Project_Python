@@ -17,13 +17,13 @@
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/spotify-analytics-web-app.git
+    git clone https://github.com/AJAmit17/Mini-Project_Python.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd spotify-analytics-web-app
+    cd Mini-Project_Python
     ```
 
 3. **Create and activate a virtual environment (recommended):**
